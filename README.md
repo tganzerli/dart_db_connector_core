@@ -21,7 +21,7 @@ dependencies:
   dart_db_connector_core:
     git:
       url: https://github.com/tganzerli/dart_db_connector_core
-      ref: v1.0.0
+      ref: v1.0.1
 ```
 
 ## Versioning
