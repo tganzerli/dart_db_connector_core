@@ -1,0 +1,24 @@
+# The executable half of the vertical contract.
+#
+# Not published: every consumer reaches it as a `dev_dependency`, and
+# `dev_dependencies` are not resolved by whoever installs a driver. When the
+# packages move to their own public repositories this directory travels with
+# the core, so one tag versions the contract and the battery that checks it.
+name: dart_db_connector_conformance
+description: >
+  Conformance battery for the dart_db_connector vertical contract. Drivers
+  import it as a dev_dependency and run it against their own database.
+version: 1.0.0
+publish_to: none
+
+repository: https://github.com/tganzerli/dart_db_connector_core
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  dart_db_connector_core:
+    path: ..
+  # Regular, not dev: this package *is* test code. It never reaches an end
+  # consumer, because it only ever appears as a dev_dependency of a driver.
+  test: ^1.25.0

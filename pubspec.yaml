@@ -1,0 +1,20 @@
+name: dart_db_connector_core
+description: >
+  The vertical contract shared by every dart_db_connector driver package:
+  the transaction lifecycle, the repository interface, the error types, and
+  the native library resolver. Carries no driver and links no client library.
+version: 1.0.0
+publish_to: none
+
+repository: https://github.com/tganzerli/dart_db_connector_core
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  ffi: ^2.1.0
+  meta: ^1.15.0
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0
